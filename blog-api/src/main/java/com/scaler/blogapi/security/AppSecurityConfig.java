@@ -33,5 +33,6 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
         http.addFilterBefore(new JWTAuthenticationFilter(), AnonymousAuthenticationFilter.class);
         http.addFilterBefore(new AuthTokenAuthenticationFilter(authTokenService), AnonymousAuthenticationFilter.class);
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+        //
     }
 }
